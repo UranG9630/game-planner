@@ -26,3 +26,5 @@ void printer_core::print_icons(QPixmap* cel){
 void printer_core::set_icons(printer_icon* _lista_ikon){
     lista_ikon = _lista_ikon;
 }
+
+

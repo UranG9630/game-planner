@@ -18,6 +18,7 @@ public:
     printer_core(printer_icon* _lista_ikon);
     void print_icons(QPixmap* cel);
     void set_icons(printer_icon* _lista_ikon);
+    //QPixmap setOpacity(QPixmap pix, double opacity);
 };
 
 #endif // PRINTER_CORE_H
