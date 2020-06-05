@@ -11,9 +11,15 @@
 #include <QDebug>
 #include <QStyle>
 #include <QAbstractButton>
-#include <printer_core.h>
 #include <QWheelEvent>
 #include <QScrollBar>
+#include <QVector>
+#include <QPainter>
+#include <QGraphicsPixmapItem>
+
+#include <printer_core.h>
+#include <scene_mouse.h>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,12 +34,16 @@ public:
     ~MainWindow();
 
 private:
+    printer_core printer;
+    printer_icon ikona;
+    QVector<printer_icon> listaikon;
+    QString masterpath;
 
     Ui::MainWindow *ui;
     QString filename;
-    QGraphicsScene scena;
+    scene_mouse scena;
     QPixmap background;
-    qreal skala = 1;
+    qreal skala;
     int obecne_pietro;
     QMenu *fileMenu;
     QActionGroup *alignmentGroup;
@@ -53,5 +63,6 @@ private slots:
     void on_pushButton_clicked();
     void btn1_clicked();
     void btn2_clicked();
+    void mouse_moved(const QGraphicsSceneMouseEvent* event);
 };
 #endif // MAINWINDOW_H

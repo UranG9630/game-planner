@@ -19,12 +19,14 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     printer_core.cpp \
-    printer_icon.cpp
+    printer_icon.cpp \
+    scene_mouse.cpp
 
 HEADERS += \
     mainwindow.h \
     printer_core.h \
-    printer_icon.h
+    printer_icon.h \
+    scene_mouse.h
 
 FORMS += \
     mainwindow.ui
